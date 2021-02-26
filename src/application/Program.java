@@ -23,9 +23,12 @@ public class Program {
 		//List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
 		//Expresao lambda
-		Function<Product, String> function = p->p.getName().toUpperCase();
-		List<String> names = list.stream().map(function).collect(Collectors.toList());
+		//Function<Product, String> function = p->p.getName().toUpperCase();
+		//List<String> names = list.stream().map(function).collect(Collectors.toList());
 		
+		//Expresao lambda inline
+		List<String> names = list.stream().map(p->p.getName().toUpperCase()).collect(Collectors.toList());
+
 		names.forEach(System.out::println);
 
 	}
